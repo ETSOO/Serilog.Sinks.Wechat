@@ -10,4 +10,41 @@ ETSOO's Serilog Sink Package for message publish to Wechat service account.
 
 ## Serilog 配置 (.Net 6)
 - 仅支持 .NET 6 +
-
+- 在 .NET Core App 中安装 Serilog
+- Install Serilog, Serilog.AspNetCore, Serilog.Sinks.Wechat, Serilog.Sinks.File(可选)
+- C# 配置代码
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+```
+- appsettings.json 配置代码
+```json
+"Serilog": {
+    "MinimumLevel": {
+      "Default": "Warning"
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "文本日志文件路径",
+          "rollingInterval": "Month"
+        }
+      },
+      {
+        "Name": "Wechat",
+        "Args": {
+          "restrictedToMinimumLevel": "Warning",
+          "tokens": [ "关注亿速思维服务号后获取的访问令牌" ]
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithExceptionDetails"
+    ]
+  }
+```
