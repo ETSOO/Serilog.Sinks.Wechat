@@ -1,0 +1,21 @@
+name: Publish to nuget
+on:
+  push:
+    branches:
+      - master # Default release branch
+jobs:
+  publish:
+    name: Build, pack & publish
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Publish Seq.App.Wechat
+      - name: Publish Serilog.Sinks.Wechat on version change
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Serilog.Sinks.Wechat/Serilog.Sinks.Wechat.csproj
+
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.ETSOONugetKey}}
