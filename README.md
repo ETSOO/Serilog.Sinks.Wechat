@@ -38,6 +38,7 @@ Log.Logger = new LoggerConfiguration()
         "Name": "Wechat",
         "Args": {
           "restrictedToMinimumLevel": "Warning",
+		  "name": "标识名称",
           "tokens": [ "关注亿速思维服务号后获取的访问令牌" ]
         }
       }

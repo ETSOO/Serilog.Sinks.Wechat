@@ -13,13 +13,14 @@ namespace Serilog.Sinks.Wechat
         /// 微信扩展
         /// </summary>
         /// <param name="loggerConfiguration">Logger configuration</param>
+        /// <param name="name">Identifying host name</param>
         /// <param name="tokens">Tokens</param>
         /// <param name="formatProvider">Format provider</param>
         /// <returns>Result</returns>
         public static LoggerConfiguration Wechat(
-          this LoggerSinkConfiguration loggerConfiguration, IEnumerable<string> tokens, IFormatProvider formatProvider = null)
+          this LoggerSinkConfiguration loggerConfiguration, string name, IEnumerable<string> tokens, IFormatProvider formatProvider = null)
         {
-            return loggerConfiguration.Sink(new Wechat(tokens, formatProvider));
+            return loggerConfiguration.Sink(new Wechat(name, tokens, formatProvider));
         }
     }
 }

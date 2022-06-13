@@ -12,6 +12,7 @@ namespace Serilog.Sinks.Wechat
     {
         const string Service = "Serilog";
 
+        private readonly string name;
         private readonly IEnumerable<string> tokens;
         private readonly IFormatProvider formatProvider;
         private DateTime lastRunAt;
@@ -26,10 +27,12 @@ namespace Serilog.Sinks.Wechat
         /// Constructor
         /// 构造函数
         /// </summary>
+        /// <param name="name">Identifying host name</param>
         /// <param name="tokens">Tokens</param>
         /// <param name="formatProvider">Format provider</param>
-        public Wechat(IEnumerable<string> tokens, IFormatProvider formatProvider = null)
+        public Wechat(string name, IEnumerable<string> tokens, IFormatProvider formatProvider = null)
         {
+            this.name = name;
             this.tokens = tokens;
             this.formatProvider = formatProvider;
         }
@@ -51,6 +54,7 @@ namespace Serilog.Sinks.Wechat
             // 发送的数据
             var data = new LogAlertDto
             {
+                Host = name,
                 Tokens = tokens.ToArray(),
                 Service = Service,
                 Id = logEvent.GetHashCode().ToString(),
