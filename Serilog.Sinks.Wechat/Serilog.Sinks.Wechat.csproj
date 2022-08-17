@@ -3,20 +3,20 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<SignAssembly>true</SignAssembly>
-	<AssemblyOriginatorKeyFile>..\etsoo.snk</AssemblyOriginatorKeyFile>
-	<Authors>ETSOO SmartERP NextGen Team</Authors>
-	<Company>ETSOO</Company>
-	<Copyright>Copyright © ETSOO 2022</Copyright>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://www.etsoo.com/SmartERP/</PackageProjectUrl>
-	<RepositoryType>GitHub</RepositoryType>
-	<PackageIcon>logo.png</PackageIcon>
-	<RepositoryUrl>https://github.com/ETSOO/Serilog.Sinks.Wechat</RepositoryUrl>
-	<Description>ETSOO's Serilog Sink for message publish to Wechat</Description>
-	<Version>1.0.2</Version>
+	  <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <SignAssembly>true</SignAssembly>
+	  <AssemblyOriginatorKeyFile>..\etsoo.snk</AssemblyOriginatorKeyFile>
+	  <Authors>ETSOO SmartERP NextGen Team</Authors>
+	  <Company>ETSOO / 亿速思维</Company>
+	  <Copyright>Copyright © ETSOO 2004 - 2022</Copyright>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://www.etsoo.com/SmartERP/</PackageProjectUrl>
+	  <RepositoryType>GitHub</RepositoryType>
+	  <PackageIcon>logo.png</PackageIcon>
+	  <RepositoryUrl>https://github.com/ETSOO/Serilog.Sinks.Wechat</RepositoryUrl>
+	  <Description>ETSOO's Serilog Sink for message publish to Wechat</Description>
+	  <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
