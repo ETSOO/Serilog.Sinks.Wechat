@@ -12,15 +12,16 @@
 	  <Copyright>Copyright © ETSOO 2004 - 2022</Copyright>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://www.etsoo.com/SmartERP/</PackageProjectUrl>
-	  <RepositoryType>GitHub</RepositoryType>
+	  <RepositoryType></RepositoryType>
 	  <PackageIcon>logo.png</PackageIcon>
 	  <RepositoryUrl>https://github.com/ETSOO/Serilog.Sinks.Wechat</RepositoryUrl>
-	  <Description>ETSOO's Serilog Sink for message publish to Wechat</Description>
-	  <Version>1.0.3</Version>
+	  <Description>Serilog Sink for message publishing to Wechat
+Serilog Sink 用于向微信发布消息</Description>
+	  <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="com.etsoo.WeiXinService" Version="1.0.8" />
+    <PackageReference Include="com.etsoo.WeiXinService" Version="1.0.10" />
     <PackageReference Include="Serilog" Version="2.11.0" />
   </ItemGroup>
 
